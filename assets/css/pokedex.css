@@ -127,6 +127,65 @@
     height: 70px;
 }
 
+.pokemon .loadMoreDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+.pokemon .loadMoreDetails button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #ffffff65;
+    border: none;
+    border-radius: 1rem;
+}
+
+.pokemon .moreDetails {
+    display: none;
+}
+
+.pokemon .moreDetails .height {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: end;
+}
+
+.pokemon .moreDetails .weight {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: end;
+}
+
+.pokemon .moreDetails .abilities {
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon .moreDetails .abilities {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: left;
+}
+
+
+
 .pagination {
     display: flex;
     flex-direction: row;
@@ -135,6 +194,8 @@
     width: 100%;
     padding: 1rem;
 }
+
+
 
 .pagination button {
     padding: .25rem .5rem;
