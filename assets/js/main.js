@@ -9,6 +9,7 @@ function loadDetails(number){
     const moreDetails = []
     moreDetails[number] = document.getElementById(`moreDetails${number}`)
 
+
         if(moreDetails[number].style.display == "block"){
             moreDetails[number].style.display = "none"
         }
@@ -31,18 +32,29 @@ function convertPokemonToLi(pokemon) {
 
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
+
+            </div>
          <div class="loadMoreDetails">
             <button id="loadMoreDetails" onclick ="loadDetails(${pokemon.number})" type="button">
                 Details
             </button>
             </div>
             <div id = "moreDetails${pokemon.number}" class = "moreDetails">
-            <span class="height"> Height: ${pokemon.height}</span>
-            <span class="weight"> Weight:${pokemon.weight}</span>
-            <ol class="abilities">
-                 Abilities:
-                 ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('')}
+            <ol class = "heightWeight">
+            Height: ${pokemon.height*10} cm | 
+            Weight: ${pokemon.weight/10} kg
+            </ol>
+            <div id = "abilitiesStats" style= "display: flex;">
+             <ol class="stats">
+            Stats:
+                 ${pokemon.statNames.map((statName, i) => `<li>${statName}: ${pokemon.statValues[i]}</li>`).join('').replaceAll('-',' ')}
              </ol>
+            <ol class="abilities">
+            Abilities:
+                 ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('').replaceAll('-',' ')}
+             </ol>
+            </div>
+            </div>
         </li>
     `
 }
@@ -51,6 +63,7 @@ function convertPokemonToLi(pokemon) {
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
+
         pokemonList.innerHTML += newHtml
     })
 }

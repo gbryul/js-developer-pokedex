@@ -149,25 +149,16 @@
     display: none;
 }
 
-.pokemon .moreDetails .height {
+.pokemon .moreDetails .heightWeight {
+    text-align: center;
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .8rem;
     border-radius: 1rem;
     filter: brightness(1.1);
-    text-align: end;
 }
 
-.pokemon .moreDetails .weight {
-    color: #fff;
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    border-radius: 1rem;
-    filter: brightness(1.1);
-    text-align: end;
-}
 
 .pokemon .moreDetails .abilities {
     padding: 0;
@@ -175,14 +166,29 @@
 }
 
 .pokemon .moreDetails .abilities {
+    text-transform: capitalize;
+    text-decoration: none;
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .77rem;
     border-radius: 1rem;
-    filter: brightness(1.1);
     text-align: left;
+    list-style-position: inside;
 }
+
+.pokemon .moreDetails .stats {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .77rem;
+    border-radius: 1rem;
+    text-align: left;
+    list-style-position: inside;
+}
+
 
 
 
